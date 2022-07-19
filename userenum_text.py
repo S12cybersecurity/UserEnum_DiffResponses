@@ -58,7 +58,7 @@ def load_words(WORDLIST_FILENAME):
                 headers = {
                 'X-Forwarded-For': ip2
                 }
-                resp = requests.post(url,data=pp,proxies=proxy,headers=headers)
+                resp = requests.post(url,data=pp,proxies=False,headers=headers)
                 bbb = resp.status_code
                 arr = resp.text
                 aaaas = len(resp.content)
